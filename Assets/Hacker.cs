@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Hacker : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
+        var Greeting = "Ajay";
+        Terminal.WriteLine(Greeting);
         ShowTheMenu();
     }
     void ShowTheMenu()
@@ -17,9 +20,21 @@ public class Hacker : MonoBehaviour
         Terminal.WriteLine("Medium");
         Terminal.WriteLine("Difficult");
     }
-    // Update is called once per frame
-    void Update()
+   void OnUserInput(string input)
     {
+
         
+        print(input);
+        if (input == "1")
+        {
+            print("true");
+        } else if (input=="7") { 
+
+            Terminal.WriteLine("you accsed special");
+
+        }else {
+            Terminal.WriteLine("please enter the valid value");
+        }
     }
+  
 }
